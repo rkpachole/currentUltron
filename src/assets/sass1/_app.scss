@@ -1,0 +1,323 @@
+.nav-options {
+  display:flex;
+  width: 80px;
+  background: #FFF;
+  height: 100%;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  border-right: 1px solid #EEE;
+  ul {
+    margin-top: 30px;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    li {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+      img {
+        max-width: 100%;
+        width: 25px;
+      }
+      a {
+        display: inline-block;
+        height: 45px;
+        width: 45px;
+        transition: 0.3s all;
+        line-height: 40px;
+        border-radius: 100%;
+        &:hover {
+          background: rgba(0,0,0,0.2);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        &.active {
+          background: rgba(0,0,0,0.072);
+          img {
+            filter: brightness(200%) !important;
+          }
+        }
+      }
+    }
+  }
+}
+.navbar {
+  background: #FFF;
+  border-bottom: 1px solid #EEE;
+  box-shadow:0 1px 2px rgba(0,0,0,0.1);
+}
+.navbar-brand {
+  font-weight: 600;
+}
+.userinfo {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content:end;
+  min-width:240px;
+  flex-grow:1;
+}
+.list-group-item {
+  background: transparent;
+  border:none;
+  padding: 0.5em 0;
+}
+.side-heading {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.d-card {
+  background-color: #FFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border:1px solid #EEE;
+  padding: 20px;
+}
+.form-search {
+  .form-control {
+    background-image: url('../images/search_icon.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 35px;
+    border-radius:25px;
+  }
+}
+.rounded-image {
+  width: 100px;
+  img {
+    border-radius: 8px;
+    max-width: 100%;
+  }
+}
+.d-card {
+  h4 {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+.form-header {
+  font-size: 18px;
+  font-weight: bold;
+  i {
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    background-color: #E4EDED;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 20px;
+    transition: 0.3s all;
+  }
+  a:hover i {
+    transform: scale(1.15);
+  }
+}
+.uploader {
+    height: 150px;
+    border: 3px dashed #99d9e8;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.85em;
+    cursor: pointer;
+    padding:20px;
+    border-radius:4px;
+    i {
+      opacity: 0.5;
+      margin-bottom: 10px;
+    }
+}
+.gj-datepicker {
+  .input-group-addon {
+    height: auto;
+    background: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #DDD;
+  }
+}
+.box-centered {
+  background-color: #FFF;
+  box-shadow: 0 35px 79px rgba(0, 0, 0, 0.2);
+  width: 40%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom:0;
+  padding: 100px 120px;
+  padding-top: 20px;
+}
+.user-card {
+  display: flex;
+  align-items: center;
+  small {
+    display: block;
+    opacity: 0.8;
+  }
+}
+.avtar {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  background: grey;
+  color:#FFF;
+  margin-right: 15px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight:600;
+}
+
+.sidebar {
+    background-color: #FFF;
+    position: absolute;
+    left: 80px;
+    width: 400px;
+    bottom: 0;
+    top: 0;
+    border-right: 1px solid #EEE;
+    margin-top: 65px;
+    height: calc(100vh - 15px);
+    overflow-y: auto;
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .sidebar-search {
+        height: auto;           
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        background-color: #FFF;
+        padding: 0 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);        
+    }
+    .sidebar-filters {
+        margin-bottom: 15px;
+        padding: 0 20px;
+    }
+    .sidebar-list {
+        padding: 0;
+        list-style: none;
+        height: calc(100vh - 125px);
+        overflow-y: auto;
+    }
+    .list-row {
+        border-bottom: 1px solid #EEE;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        cursor: pointer;
+        &:hover {
+          background-color:#f0f4f7;
+        }
+    }
+    .search {
+        padding: 6px 14px;
+        padding-left: 14px;
+        border: 1px solid #DDD;
+        border-radius: 4px;
+        background-image: url('../images/search_icon.png');
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 34px;
+        width: 150px;
+        position: relative;
+        &:focus {
+          width:360px;
+          position: absolute;
+          z-index: 999;
+        }
+    }
+    .capsule {
+      font-size: 0.7em;
+      padding: 1px 12px;
+    }
+    .p-l-0 {
+      padding-left: 0 !important;
+    }
+    .list-group-item {
+      padding: 0.5em 0.5em;
+      cursor: pointer;
+    }
+}
+.user-name {
+  display: block;
+}
+.user-note {
+    font-size: 12px;
+    display: block;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+}
+.timestamp {
+  font-size: 10px;
+  line-height: 14px;
+  opacity: 0.5;
+  font-style: italic;
+  display: inline-block;
+}
+.side-filters {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    height: 300px;
+    padding: 10px 15px;
+    top: 80px;
+    bottom: auto;
+    margin-bottom: 50px;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lists {
+  li {
+    margin-bottom: 10px;
+    list-style: square;
+  }
+}
+.ground {
+  h1 {
+    font-size:20px;
+    margin:0;
+  }
+}
+.avail-chart {
+  .ac-header {
+    padding: 20px;
+    border-bottom: 1px solid #DDD;
+    h2 {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+}
+.list {
+  padding-left: 0;
+  list-style: none;
+}

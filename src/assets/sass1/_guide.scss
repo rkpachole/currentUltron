@@ -1,0 +1,27 @@
+.guide{
+	.color {
+		span {
+			height:em(100);
+			width:em(100);
+			border-radius:100%;
+			display:inline-block;
+			line-height:em(100);
+			text-align:center;
+			margin-right:em(20);		
+		}
+		&__primary {
+			background-color:$color__primary;
+			color:$color__light;
+			}
+		&__secondary {
+			background-color:$color__secondary;
+			color:$color__light;
+		}
+		&__inverse {
+			background-color:$color__inverse		
+		}
+	}
+	h1:first-child {
+		color:$color__primary;
+	}
+}

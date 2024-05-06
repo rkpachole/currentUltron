@@ -1,0 +1,63 @@
+// em change pixel into em 
+@function em($pixel, $defalut-font-size: 16 ){
+  @return #{ $pixel/$defalut-font-size }em; 
+}
+/* Media query map function starts */
+// max width functions
+$max-breakpoints: (
+    xs: 480px,
+    sm: 575.98px,
+    md: 767.98px,
+    lg: 991.98px
+    
+);
+@mixin max($key){
+    @if map-has-key($max-breakpoints, $key) {
+        @media(max-width: #{map-get($max-breakpoints, $key) }) {
+            @content;   
+        }
+    }
+    @else{
+        @warn "Unfortunately, no value could be retrieved from `#{$key}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+// min width functions
+$min-breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+@mixin min($key){
+    @if map-has-key($min-breakpoints, $key) {
+        @media(min-width: #{map-get($min-breakpoints, $key) }) {
+            @content;   
+        }
+    }
+    @else{
+        @warn "Unfortunately, no value could be retrieved from `#{$key}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+// only for tablet
+@mixin tab{
+    @media(min-width: 768px) and (max-width: 1024px){
+        @content;
+    }
+}
+@mixin max-tab{
+    @media(max-width: 1024px) {
+        @content;
+    }
+}
+@mixin min-fullHd{
+    @media(min-width: 1920px) {
+        @content;
+    }
+}
+@mixin max-fullHd{
+    @media(max-width: 1919px) {
+        @content;
+    }
+}
